@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ainul | Personal Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sage: #87977a;
+      --dark: #354536;
+      --cream: #f7f5ed;
+      --light: #e9ecdf;
+      --beige: #e4dccb;
+      --text: #424a3e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      position: sticky;
+      top: 0;
+      background: rgba(247,245,237,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+      border-bottom: 1px solid #e6e5dc;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 23px;
+      color: var(--dark);
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 13px;
+    }
+
+    .nav-links a:hover {
+      color: var(--sage);
+    }
+
+    section {
+      padding: 85px 10%;
+      scroll-margin-top: 65px;
+    }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--light);
+      padding: 100px 12%;
+    }
+
+    .eyebrow {
+      color: #718269;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark);
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 82px);
+      margin: 15px 0;
+    }
+
+    h2 {
+      font-size: 37px;
+      margin: 10px 0 20px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 580px;
+      font-size: 16px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--dark);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      margin-top: 25px;
+      font-size: 13px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: var(--sage);
+      transform: translateY(-3px);
+    }
+
+    .section-intro {
+      max-width: 650px;
+      margin-bottom: 35px;
+    }
+
+    .about-grid, .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 27px;
+      border-radius: 18px;
+      border: 1px solid #e9e6dc;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(53,69,54,0.08);
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--light);
+      color: var(--dark);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      margin: 4px 3px 4px 0;
+    }
+
+    .project-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 17px;
+      border: 1px solid #e8e6dd;
+    }
+
+    .project-link {
+      display: inline-block;
+      color: #64785d;
+      font-weight: 700;
+      font-size: 13px;
+      margin-top: 15px;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .timeline {
+      border-left: 2px solid var(--sage);
+      padding-left: 25px;
+      margin-left: 8px;
+    }
+
+    .timeline .card {
+      margin-bottom: 20px;
+    }
+
+    .date {
+      color: #78866e;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: var(--cream);
+    }
+
+    .contact p {
+      color: #e0e5d8;
+    }
+
+    .contact .button {
+      background: var(--cream);
+      color: var(--dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      font-size: 12px;
+      color: #777e70;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 13px;
+        flex-wrap: wrap;
+        font-size: 12px;
+      }
+
+      section {
+        padding: 65px 7%;
+      }
+
+      .hero {
+        min-height: 480px;
+        padding: 75px 8%;
+      }
+
+      .about-grid, .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#home" class="logo">ainul.</a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Achievements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <span class="eyebrow">Welcome to my portfolio ✿</span>
+    <h1>Hello, I'm<br>Ainul.</h1>
+    <p>
+      An Accountancy student with an interest in accounting,
+      auditing and data analytics. Exploring the connection
+      between numbers, technology and business.
+    </p>
+    <div>
+      <a href="#projects" class="button">Explore My Work ↗</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-intro">
+      <span class="eyebrow">A little introduction</span>
+      <h2>About Me</h2>
+      <p>
+        I have an academic background in Accountancy and
+        practical training experience in an audit firm.
+        I enjoy learning new skills, working with data and
+        discovering ways technology can support business processes.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="card">
+        <h3>Areas of Interest</h3>
+        <span class="tag">Accounting</span>
+        <span class="tag">Auditing</span>
+        <span class="tag">Data Analytics</span>
+        <span class="tag">Financial Reporting</span>
+        <span class="tag">FP&A</span>
+      </div>
+
+      <div class="card">
+        <h3>Technical Skills</h3>
+        <span class="tag">Microsoft Excel</span>
+        <span class="tag">Data Entry</span>
+        <span class="tag">Data Cleaning</span>
+        <span class="tag">Data Organisation</span>
+        <span class="tag">GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <span class="eyebrow">My journey</span>
+    <h2>Work Experience</h2>
+
+    <div class="timeline">
+      <div class="card">
+        <p class="date">9 March 2026 – 28 August 2026</p>
+        <h3>Audit Intern</h3>
+        <p><strong>Ismawadee & Co.</strong></p>
+        <p>
+          Gained practical exposure to audit procedures,
+          supporting documents and financial statement testing.
+        </p>
+        <br>
+        <ul>
+          <li>Assisted with cash and bank balance audit procedures.</li>
+          <li>Assisted with Property, Plant and Equipment (PPE) audit work.</li>
+          <li>Performed payroll-related audit testing.</li>
+          <li>Assisted with vouching and supporting documents.</li>
+          <li>Prepared and organised audit working papers.</li>
+          <li>Assisted with audit documentation and confirmation letters.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <span class="eyebrow">Things I've worked on</span>
+    <h2>My Projects</h2>
+    <p class="section-intro">
+      A collection of academic projects and creative ideas
+      developed through teamwork and learning.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <img
+          class="project-image"
+          src="https://raw.githubusercontent.com/enul-portfolio/Sales-Performance-Customer-Analysis/main/sales.dashboard.png"
+          alt="Sales Performance Dashboard">
+
+        <span class="tag">Microsoft Excel</span>
+        <span class="tag">AIS655</span>
+        <h3>Sales Performance & Customer Analysis</h3>
+        <p>
+          An academic group project using simulated data
+          to explore sales performance and customer information.
+        </p>
+        <p><strong>My contribution:</strong> Data entry,
+          data cleaning and data organisation.</p>
+        <a class="project-link"
+           href="https://github.com/enul-portfolio/Sales-Performance-Customer-Analysis">
+          View Project ↗
+        </a>
+      </div>
+
+      <div class="card">
+        <div style="background:#e9ecdf;padding:55px 15px;
+                    text-align:center;border-radius:12px;
+                    margin-bottom:17px;font-size:45px;">
+          ❀
+        </div>
+        <span class="tag">Innovation</span>
+        <span class="tag">Group Project</span>
+        <h3>BluScent Air Conditioner</h3>
+        <p>
+          A multifunctional air conditioning concept combining
+          air purification, white noise, built-in Wi-Fi speakers
+          and smart connectivity.
+        </p>
+        <p><strong>Achievement:</strong> MIIEX Silver Award.</p>
+      </div>
+
+      <div class="card">
+        <div style="background:#e9ecdf;padding:55px 15px;
+                    text-align:center;border-radius:12px;
+                    margin-bottom:17px;font-size:45px;">
+          🌿
+        </div>
+        <span class="tag">SULAM</span>
+        <span class="tag">Sales & Marketing</span>
+        <h3>Kedai Ramah</h3>
+        <p>
+          An academic community engagement project involving
+          business and marketing ideas for a local food business.
+        </p>
+        <p><em>More project details coming soon.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <span class="eyebrow">Milestones & learning</span>
+    <h2>Certificates & Achievements</h2>
+
+    <div class="cards">
+      <div class="card">
+        <span class="tag">Training</span>
+        <h3>Data Analytics Power Up Programme</h3>
+        <p>Faculty of Accountancy, UiTM</p>
+        <p>Delivered by PwC's Academy</p>
+        <p class="date">December 2024 – January 2025</p>
+        <a class="project-link"
+           href="https://github.com/enul-portfolio/enul-portfolio/blob/main/Certificate_of_Completion.pdf">
+          View Certificate ↗
+        </a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Silver Award 🏆</span>
+        <h3>Melaka International Intellectual Exposition</h3>
+        <p>Project: BluScent Air Conditioner</p>
+        <p>Universiti Teknologi MARA (UiTM) Cawangan Melaka</p>
+        <a class="project-link"
+           href="https://github.com/enul-portfolio/enul-portfolio/blob/main/C_SILVER_485.pdf">
+          View Award Certificate ↗
+        </a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Participation</span>
+        <h3>MIIEX Certificate of Participation</h3>
+        <p>Melaka International Intellectual Exposition</p>
+        <a class="project-link"
+           href="https://github.com/enul-portfolio/enul-portfolio/blob/main/C_485.pdf">
+          View Certificate ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <span class="eyebrow">Let's connect</span>
+    <h2>Thank you for visiting!</h2>
+    <p>
+      Interested in my work? Feel free to explore
+      my projects and connect with me on GitHub.
+    </p>
+    <a class="button"
+       href="https://github.com/enul-portfolio"
+       target="_blank" rel="noopener">
+      Visit My GitHub ↗
+    </a>
+  </section>
+
+  <footer>
+    <p>Designed with care by Ainul ✿</p>
+    <p>© 2026 Ainul's Portfolio</p>
+  </footer>
+
+</body>
+</html>
