@@ -73,13 +73,33 @@
       scroll-margin-top: 65px;
     }
 
+    /* HERO SECTION */
     .hero {
       min-height: 570px;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
       background: var(--light);
       padding: 100px 12%;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-image {
+      flex: 0 0 300px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 5px solid #e8eee5;
+      display: block;
     }
 
     .eyebrow {
@@ -228,6 +248,7 @@
       color: #777e70;
     }
 
+    /* MOBILE RESPONSIVE */
     @media (max-width: 650px) {
       nav {
         align-items: flex-start;
@@ -246,12 +267,28 @@
       }
 
       .hero {
-        min-height: 480px;
+        min-height: auto;
         padding: 75px 8%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-image {
+        width: 100%;
+        max-width: 280px;
+        flex: none;
+      }
+
+      .hero-image img {
+        height: 320px;
       }
 
       .about-grid, .cards {
         grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 55px;
       }
     }
   </style>
@@ -272,15 +309,21 @@
   </nav>
 
   <section class="hero" id="home">
-    <span class="eyebrow">Welcome to my portfolio ✿</span>
-    <h1>Hello, I'm<br>Ainul.</h1>
-    <p>
-      An Accountancy student with an interest in accounting,
-      auditing and data analytics. Exploring the connection
-      between numbers, technology and business.
-    </p>
-    <div>
-      <a href="#projects" class="button">Explore My Work ↗</a>
+    <div class="hero-content">
+      <span class="eyebrow">Welcome to my portfolio ✿</span>
+      <h1>Hello, I'm<br>Ainul.</h1>
+      <p>
+        An Accountancy student with an interest in accounting,
+        auditing and data analytics. Exploring the connection
+        between numbers, technology and business.
+      </p>
+      <div>
+        <a href="#projects" class="button">Explore My Work ↗</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Ainul's profile photo">
     </div>
   </section>
 
