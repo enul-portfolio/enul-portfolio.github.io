@@ -158,7 +158,7 @@ h2 {
 }
 
 .about-content p {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   color: #666;
 }
 
@@ -186,21 +186,6 @@ h2 {
   color: var(--sage);
   font-size: 13px;
   margin-bottom: 12px;
-}
-
-.experience-card {
-  max-width: 850px;
-}
-
-.experience-card ul {
-  padding-left: 22px;
-  margin: 12px 0 20px;
-  color: #666;
-}
-
-.experience-card h4 {
-  color: var(--dark-sage);
-  margin-top: 20px;
 }
 
 .projects {
@@ -253,16 +238,69 @@ h2 {
   margin: 5px 3px 0 0;
 }
 
-.text-link {
-  display: inline-block;
-  color: var(--dark-sage);
-  font-size: 13px;
-  font-weight: 700;
-  margin-top: 15px;
+/* WORK EXPERIENCE */
+
+.experience-card {
+  max-width: 850px;
+  background: var(--white);
 }
 
-.text-link:hover {
-  text-decoration: underline;
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.experience-header h3 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  margin-bottom: 3px;
+}
+
+.experience-header p {
+  color: #777;
+  font-size: 14px;
+}
+
+.experience-date {
+  color: var(--sage);
+  background: #e9eee4;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.experience-description {
+  max-width: 760px;
+  color: #666;
+}
+
+.experience-description p {
+  margin-bottom: 18px;
+}
+
+.experience-skills {
+  border-top: 1px solid #e9e2d7;
+  padding-top: 22px;
+  margin-top: 25px;
+}
+
+.experience-skills h4 {
+  color: var(--dark-sage);
+  margin-bottom: 12px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tags .tag {
+  margin: 0;
 }
 
 .achievements {
@@ -296,6 +334,8 @@ footer {
   padding: 20px;
   font-size: 12px;
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 850px) {
   nav {
@@ -338,12 +378,24 @@ footer {
     padding: 65px 7%;
   }
 }
+
+@media (max-width: 600px) {
+  .experience-header {
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- NAVIGATION -->
+
 <nav>
   <div class="logo">Ainul.</div>
 
@@ -358,7 +410,9 @@ footer {
   </ul>
 </nav>
 
+
 <!-- HOME -->
+
 <section class="hero" id="home">
 
   <div class="hero-content">
@@ -387,7 +441,9 @@ footer {
 
 </section>
 
+
 <!-- ABOUT ME -->
+
 <section class="about" id="about">
 
   <span class="section-label">Get to know me</span>
@@ -396,31 +452,32 @@ footer {
   <div class="about-content">
 
     <p>
-      I have an academic background in Accountancy and
-      an interest in accounting, auditing and data analytics.
-      Throughout my academic journey, I have developed
-      an understanding of financial reporting, accounting
-      principles and business operations.
+      I am an Accountancy graduate from Universiti Teknologi
+      MARA (UiTM), with an interest in accounting, auditing
+      and data analytics.
     </p>
 
     <p>
-      I also enjoy exploring digital tools such as
-      Microsoft Excel and Power BI to organise data,
-      create dashboards and present information
-      in a meaningful way.
+      Throughout my academic journey, I have gained exposure
+      to financial reporting, auditing, taxation and accounting
+      information systems. I also enjoy exploring digital tools
+      such as Microsoft Excel and Power BI to organise data,
+      develop dashboards and present meaningful insights.
     </p>
 
     <p>
-      I am continuously learning and looking for
-      opportunities to develop my technical,
-      analytical and professional skills.
+      I am passionate about continuous learning and eager
+      to apply my knowledge while developing my technical,
+      analytical and professional skills in the workplace.
     </p>
 
   </div>
 
 </section>
 
+
 <!-- EDUCATION -->
+
 <section id="education">
 
   <span class="section-label">My academic background</span>
@@ -437,16 +494,18 @@ footer {
     </p>
 
     <p>
-      Academic focus: Financial Accounting,
-      Auditing, Taxation, Management Accounting
-      and Accounting Information Systems.
+      Academic focus: Financial Accounting, Auditing,
+      Taxation, Management Accounting and Accounting
+      Information Systems.
     </p>
 
   </div>
 
 </section>
 
+
 <!-- WORK EXPERIENCE -->
+
 <section class="about" id="experience">
 
   <span class="section-label">Professional journey</span>
@@ -454,44 +513,67 @@ footer {
 
   <div class="experience-card">
 
-    <h3>Audit Intern – Ismawadee & Co.</h3>
+    <div class="experience-header">
 
-    <p class="date">
-      Industrial Training | 2026
-    </p>
+      <div>
+        <h3>Audit Intern</h3>
+        <p>Ismawadee & Co.</p>
+      </div>
 
-    <p>
-      Gained practical exposure to external audit
-      procedures and financial documentation
-      while working alongside the audit team.
-    </p>
+      <span class="experience-date">
+        2026
+      </span>
 
-    <h4>Responsibilities</h4>
+    </div>
 
-    <ul>
-      <li>Assisted in auditing cash and bank balances.</li>
-      <li>Assisted in auditing Property, Plant and Equipment (PPE).</li>
-      <li>Performed payroll-related testing, including salaries and statutory contributions.</li>
-      <li>Conducted vouching and supporting document verification.</li>
-      <li>Prepared and organised audit working papers.</li>
-      <li>Assisted with audit documentation and confirmation letters.</li>
-      <li>Reviewed client financial records and supporting documents.</li>
-    </ul>
+    <div class="experience-description">
 
-    <h4>Skills Developed</h4>
+      <p>
+        During my industrial training at Ismawadee & Co.,
+        I gained practical exposure to external audit
+        procedures and financial documentation while
+        working alongside the audit team.
+      </p>
 
-    <span class="tag">Audit Procedures</span>
-    <span class="tag">Microsoft Excel</span>
-    <span class="tag">Financial Reporting</span>
-    <span class="tag">Analytical Thinking</span>
-    <span class="tag">Documentation</span>
-    <span class="tag">Teamwork</span>
+      <p>
+        My responsibilities included assisting with the
+        audit of cash and bank balances, Property, Plant
+        and Equipment (PPE), as well as payroll-related
+        testing involving salaries and statutory contributions.
+      </p>
+
+      <p>
+        I was also involved in vouching, reviewing supporting
+        documents, preparing audit working papers and
+        organising audit documentation. These experiences
+        strengthened my understanding of audit procedures,
+        financial records and professional teamwork.
+      </p>
+
+    </div>
+
+    <div class="experience-skills">
+
+      <h4>Skills & Exposure</h4>
+
+      <div class="skill-tags">
+        <span class="tag">Audit Procedures</span>
+        <span class="tag">Microsoft Excel</span>
+        <span class="tag">Financial Documentation</span>
+        <span class="tag">Payroll Testing</span>
+        <span class="tag">Analytical Thinking</span>
+        <span class="tag">Teamwork</span>
+      </div>
+
+    </div>
 
   </div>
 
 </section>
 
+
 <!-- PROJECTS -->
+
 <section class="projects" id="projects">
 
   <span class="section-label">My work & learning</span>
@@ -499,7 +581,6 @@ footer {
 
   <div class="project-grid">
 
-    <!-- EXCEL -->
     <div class="project-card">
 
       <img src="excel-dashboard.jpg"
@@ -520,7 +601,7 @@ footer {
 
     </div>
 
-    <!-- POWER BI -->
+
     <div class="project-card">
 
       <img src="powerbi-dashboard.jpg"
@@ -539,7 +620,7 @@ footer {
 
     </div>
 
-    <!-- SULAM -->
+
     <div class="project-card">
 
       <img src="sulam-project.jpg"
@@ -548,10 +629,9 @@ footer {
       <h3>SULAM Project</h3>
 
       <p>
-        A service-learning academic project that
-        involved applying classroom knowledge
-        through community engagement, teamwork
-        and practical activities.
+        A service-learning academic project involving
+        the application of classroom knowledge through
+        community engagement, teamwork and practical activities.
       </p>
 
       <span class="tag">Community Engagement</span>
@@ -560,7 +640,7 @@ footer {
 
     </div>
 
-    <!-- BLUSCENT -->
+
     <div class="project-card">
 
       <img src="bluscent-project.jpg"
@@ -570,8 +650,8 @@ footer {
 
       <p>
         An academic business project involving
-        business planning, marketing ideas
-        and entrepreneurial activities.
+        business planning, marketing ideas and
+        entrepreneurial activities.
       </p>
 
       <span class="tag">Business</span>
@@ -584,7 +664,9 @@ footer {
 
 </section>
 
-<!-- ACHIEVEMENTS -->
+
+<!-- AWARDS & ACHIEVEMENTS -->
+
 <section class="achievements" id="achievements">
 
   <span class="section-label">Recognition & learning</span>
@@ -608,29 +690,31 @@ footer {
 
   </div>
 
-  <h2 style="margin-top:65px;">Certificates</h2>
+
+  <h2 style="margin-top:65px;">
+    Certificates
+  </h2>
 
   <div class="certificate-grid">
 
     <div class="certificate-card">
 
-      <h3>PwC Certificate</h3>
+      <h3>Professional Certificates</h3>
 
       <p>
-        Professional learning and development.
-        Add the exact programme title and certificate
-        details here.
+        Professional learning and development
+        certificates.
       </p>
 
     </div>
 
     <div class="certificate-card">
 
-      <h3>Other Certifications</h3>
+      <h3>Academic Certificates</h3>
 
       <p>
-        Additional academic, professional
-        and skills-related certificates.
+        Additional academic and skills-related
+        certificates.
       </p>
 
     </div>
@@ -639,7 +723,9 @@ footer {
 
 </section>
 
+
 <!-- CONTACT -->
+
 <section class="contact" id="contact">
 
   <span class="section-label" style="color:#D8CBB8;">
@@ -658,13 +744,15 @@ footer {
     GitHub ↗
   </a>
 
-  <!-- Replace with your actual email -->
   <a href="mailto:YOUR_EMAIL@gmail.com"
      class="button">
     Email Me ↗
   </a>
 
 </section>
+
+
+<!-- FOOTER -->
 
 <footer>
   <p>© 2026 Ainul. Designed with care ✿</p>
