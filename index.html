@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Ainul | Accountancy Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,6 +48,8 @@
       margin: auto;
     }
 
+    /* NAVIGATION */
+
     nav {
       display: flex;
       justify-content: space-between;
@@ -78,6 +81,8 @@
     .nav-links a:hover {
       color: var(--dark-sage);
     }
+
+    /* HERO */
 
     .hero {
       min-height: 85vh;
@@ -147,6 +152,8 @@
       box-shadow: 15px 15px 0 var(--sage);
     }
 
+    /* GENERAL SECTIONS */
+
     section {
       padding: 85px 0;
     }
@@ -168,7 +175,9 @@
       font-size: 14px;
     }
 
-    #about, #projects {
+    /* ABOUT */
+
+    #about {
       background: var(--light);
     }
 
@@ -226,6 +235,8 @@
       border-bottom: 1px solid #e5e6dc;
     }
 
+    /* EXPERIENCE */
+
     .experience-card {
       background: white;
       padding: 35px;
@@ -262,6 +273,12 @@
 
     .experience-card li {
       margin-bottom: 8px;
+    }
+
+    /* PROJECTS */
+
+    #projects {
+      background: var(--light);
     }
 
     .project-grid {
@@ -339,6 +356,8 @@
       opacity: 0.8;
     }
 
+    /* ACHIEVEMENTS */
+
     .achievement-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -378,6 +397,8 @@
       text-decoration: underline;
     }
 
+    /* CONTACT */
+
     #contact {
       background: var(--deep);
       color: white;
@@ -416,6 +437,8 @@
       font-size: 11px;
       border-top: 1px solid #465545;
     }
+
+    /* RESPONSIVE */
 
     @media (max-width: 768px) {
       nav {
@@ -467,6 +490,7 @@
 
 <body>
 
+  <!-- NAVIGATION -->
   <nav>
     <a href="#home" class="logo">Ainul.</a>
 
@@ -480,10 +504,13 @@
     </ul>
   </nav>
 
+  <!-- HERO -->
   <section class="hero" id="home">
     <div class="container hero-content">
+
       <div>
         <div class="small-heading">Welcome to my portfolio</div>
+
         <h1>Hello, I'm<br>Ainul.</h1>
 
         <p>
@@ -500,17 +527,21 @@
           src="https://raw.githubusercontent.com/enul-portfolio/enul-portfolio.github.io/main/lv_0_20260321221804.jpg"
           alt="Ainul profile photo">
       </div>
+
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about">
     <div class="container">
+
       <div class="section-heading">
         <h2>About Me</h2>
         <p>A little introduction about my background and interests.</p>
       </div>
 
       <div class="about-content">
+
         <div class="about-text">
           <h3>Numbers, Learning & Growth.</h3>
 
@@ -544,25 +575,31 @@
 
         <div class="about-card">
           <h3>Quick Profile</h3>
+
           <p><strong>Education:</strong> Bachelor of Accountancy</p>
           <p><strong>University:</strong> Universiti Teknologi MARA</p>
           <p><strong>Field:</strong> Accounting & Finance</p>
           <p><strong>Interests:</strong> Auditing, FP&A & Data Analytics</p>
           <p><strong>Learning:</strong> Excel & Business Analysis</p>
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
+
       <div class="section-heading">
         <h2>Experience</h2>
         <p>My practical exposure and professional learning journey.</p>
       </div>
 
       <div class="experience-card">
+
         <h3>Audit Intern</h3>
+
         <div class="experience-date">
           Ismawadee & Co. | 9 March 2026 – 28 August 2026
         </div>
@@ -581,12 +618,15 @@
           <li>Assisted in preparing and organising audit working papers.</li>
           <li>Supported audit documentation and confirmation letter preparation.</li>
         </ul>
+
       </div>
     </div>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
+
       <div class="section-heading">
         <h2>My Projects</h2>
         <p>A collection of academic projects and practical work.</p>
@@ -594,14 +634,20 @@
 
       <div class="project-grid">
 
+        <!-- PROJECT 1 -->
         <div class="project-card">
+
           <img
             class="project-image"
             src="https://raw.githubusercontent.com/enul-portfolio/Sales-Performance-Customer-Analysis/main/sales.dashboard.png"
             alt="Sales Performance Dashboard">
 
           <div class="project-content">
-            <div class="project-category">Excel & Data Analysis</div>
+
+            <div class="project-category">
+              Excel & Data Analysis
+            </div>
+
             <h3>Sales Performance & Customer Analysis</h3>
 
             <p>
@@ -611,32 +657,39 @@
             </p>
 
             <div class="project-links">
+
               <a
                 href="https://github.com/enul-portfolio/Sales-Performance-Customer-Analysis"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="project-link">
                 View Project ↗
               </a>
 
               <a
-                href="https://raw.githubusercontent.com/enul-portfolio/Sales-Performance-Customer-Analysis/main/Sales%20peformance%20%26%20Analysis.xlsx"
-                download
+                href="https://github.com/enul-portfolio/Sales-Performance-Customer-Analysis/blob/main/Sales%20peformance%20%26%20Analysis.xlsx"
+                target="_blank"
                 class="project-link secondary">
-                Download Excel ↗
+                View Excel File ↗
               </a>
+
             </div>
           </div>
         </div>
 
+        <!-- PROJECT 2 -->
         <div class="project-card">
+
           <img
             class="project-image"
             src="https://raw.githubusercontent.com/enul-portfolio/enul-portfolio.github.io/main/sulam%20cover%20report.png"
             alt="SULAM Business Advisory Project">
 
           <div class="project-content">
-            <div class="project-category">SULAM & Business Advisory</div>
+
+            <div class="project-category">
+              SULAM & Business Advisory
+            </div>
+
             <h3>Kedai Ramah Business Advisory</h3>
 
             <p>
@@ -647,13 +700,14 @@
             </p>
 
             <div class="project-links">
+
               <a
                 href="https://github.com/enul-portfolio/enul-portfolio.github.io/blob/main/SULAM_Business_Advisory_Report.pdf"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="project-link">
                 View Report ↗
               </a>
+
             </div>
           </div>
         </div>
@@ -662,8 +716,10 @@
     </div>
   </section>
 
+  <!-- ACHIEVEMENTS -->
   <section id="achievements">
     <div class="container">
+
       <div class="section-heading">
         <h2>Achievements & Certificates</h2>
         <p>Recognition and learning experiences along the way.</p>
@@ -673,6 +729,7 @@
 
         <div class="achievement-card">
           <div class="achievement-icon">🏆</div>
+
           <h3>MIIEX Silver Award</h3>
 
           <p>
@@ -683,7 +740,6 @@
           <a
             href="https://github.com/enul-portfolio/enul-portfolio/blob/main/C_SILVER_485.pdf"
             target="_blank"
-            rel="noopener noreferrer"
             class="certificate-link">
             View Certificate ↗
           </a>
@@ -691,6 +747,7 @@
 
         <div class="achievement-card">
           <div class="achievement-icon">📜</div>
+
           <h3>MIIEX Participation</h3>
 
           <p>
@@ -701,7 +758,6 @@
           <a
             href="https://github.com/enul-portfolio/enul-portfolio/blob/main/C_485.pdf"
             target="_blank"
-            rel="noopener noreferrer"
             class="certificate-link">
             View Certificate ↗
           </a>
@@ -709,6 +765,7 @@
 
         <div class="achievement-card">
           <div class="achievement-icon">🎓</div>
+
           <h3>Data Analytics Power Up Programme</h3>
 
           <p>
@@ -719,7 +776,6 @@
           <a
             href="https://github.com/enul-portfolio/enul-portfolio/blob/main/Certificate_of_Completion.pdf"
             target="_blank"
-            rel="noopener noreferrer"
             class="certificate-link">
             View Certificate ↗
           </a>
@@ -729,8 +785,10 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
+
       <div class="section-heading">
         <h2>Let's Connect</h2>
         <p>Thank you for taking the time to explore my portfolio.</p>
@@ -744,13 +802,14 @@
       <a
         href="https://www.linkedin.com/"
         target="_blank"
-        rel="noopener noreferrer"
         class="contact-button">
         Connect on LinkedIn ↗
       </a>
+
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 Ainul. Designed with care.</p>
   </footer>
