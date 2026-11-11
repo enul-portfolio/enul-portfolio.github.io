@@ -4,21 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Ainul | Personal Portfolio</title>
+  <title>Ainul Hadhirah | Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --sage: #8b9b83;
-      --dark: #344238;
-      --cream: #f8f6ef;
-      --light: #eeeee5;
-      --white: #ffffff;
-      --text: #424b43;
+      --sage: #87977A;
+      --dark-sage: #53664E;
+      --cream: #F5F0E6;
+      --beige: #D8CBB8;
+      --dark: #30382F;
+      --white: #FFFDF8;
     }
 
     * {
@@ -31,92 +29,96 @@
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--cream);
-      color: var(--text);
+      color: var(--dark);
       line-height: 1.7;
     }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* NAVIGATION */
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 22px 9%;
-      background: var(--cream);
+      padding: 20px 8%;
+      background: var(--white);
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 1px solid #e5e4dc;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
     }
 
     .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 25px;
-      font-weight: bold;
-      color: var(--dark);
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--dark-sage);
     }
 
-    .nav-links {
+    nav ul {
       display: flex;
       gap: 25px;
       list-style: none;
-      font-size: 13px;
     }
 
-    .nav-links a:hover {
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
       color: var(--sage);
     }
 
-    /* HERO */
+    section {
+      padding: 85px 10%;
+    }
 
     .hero {
-      min-height: 580px;
+      min-height: 85vh;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 50px;
-      background: var(--light);
-      padding: 90px 12%;
+      background: var(--cream);
     }
 
-    .hero-content {
-      flex: 1;
+    .hero-text {
+      max-width: 600px;
     }
 
     .eyebrow {
-      color: var(--sage);
+      color: var(--dark-sage);
       font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(48px, 7vw, 75px);
-      color: var(--dark);
-      line-height: 1.15;
-      margin: 20px 0;
+      font-size: clamp(48px, 7vw, 78px);
+      line-height: 1.1;
+      margin: 18px 0;
     }
 
-    .hero p {
-      max-width: 480px;
-      margin-bottom: 30px;
-      font-size: 15px;
+    .hero-text p {
+      max-width: 520px;
+      color: #62695E;
+      margin-bottom: 28px;
     }
 
     .button {
       display: inline-block;
-      padding: 13px 25px;
-      background: var(--dark);
+      padding: 12px 25px;
+      background: var(--dark-sage);
       color: white;
       border-radius: 30px;
-      font-size: 13px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
       transition: 0.3s;
     }
 
@@ -126,46 +128,39 @@
     }
 
     .hero-image {
-      flex: 0 0 300px;
+      width: 300px;
+      height: 370px;
+      border-radius: 150px 150px 25px 25px;
+      overflow: hidden;
+      background: var(--beige);
+      flex-shrink: 0;
+      box-shadow: 15px 15px 0 var(--sage);
     }
 
     .hero-image img {
       width: 100%;
-      height: 370px;
+      height: 100%;
       object-fit: cover;
-      border-radius: 180px 180px 20px 20px;
-      border: 6px solid white;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    /* GENERAL SECTIONS */
-
-    section:not(.hero) {
-      padding: 85px 12%;
     }
 
     .section-title {
-      font-family: 'Playfair Display', serif;
       font-size: 38px;
-      color: var(--dark);
+      color: var(--dark-sage);
       margin-bottom: 12px;
     }
 
-    .section-subtitle {
-      color: var(--sage);
-      font-size: 13px;
-      letter-spacing: 1px;
-      margin-bottom: 30px;
+    .section-intro {
+      color: #70766A;
+      margin-bottom: 35px;
+      max-width: 650px;
     }
 
-    /* ABOUT */
-
     .about {
-      background: var(--cream);
+      background: var(--white);
     }
 
     .about-content {
-      max-width: 750px;
+      max-width: 800px;
     }
 
     .about-content p {
@@ -176,146 +171,147 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 25px;
+      margin-top: 22px;
     }
 
     .skill {
-      background: #e5e9df;
-      color: var(--dark);
-      padding: 9px 17px;
-      border-radius: 30px;
-      font-size: 12px;
+      background: var(--cream);
+      color: var(--dark-sage);
+      padding: 8px 17px;
+      border-radius: 25px;
+      font-size: 13px;
+      font-weight: 600;
     }
 
-    /* EXPERIENCE */
-
     .experience {
-      background: var(--light);
+      background: var(--cream);
     }
 
     .experience-card {
-      background: white;
+      background: var(--white);
       padding: 30px;
-      border-radius: 15px;
       border-left: 5px solid var(--sage);
-      max-width: 750px;
+      border-radius: 12px;
+      max-width: 850px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.04);
     }
 
     .experience-card h3 {
-      color: var(--dark);
-      font-size: 20px;
+      font-size: 23px;
+      margin-bottom: 5px;
     }
 
     .date {
-      color: var(--sage);
+      color: var(--dark-sage);
       font-size: 13px;
-      margin: 5px 0 15px;
-      font-weight: 600;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
 
     .experience-card ul {
       padding-left: 20px;
     }
 
-    /* PROJECTS */
-
     .projects {
-      background: var(--cream);
+      background: var(--white);
     }
 
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
 
     .project-card {
-      background: white;
-      padding: 28px;
+      background: var(--cream);
       border-radius: 16px;
-      border: 1px solid #e8e7df;
+      overflow: hidden;
       transition: 0.3s;
     }
 
     .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
-    .project-card h3 {
-      font-family: 'Playfair Display', serif;
-      color: var(--dark);
-      font-size: 22px;
-      margin-bottom: 12px;
+    .project-image {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+      background: var(--beige);
+    }
+
+    .project-content {
+      padding: 25px;
     }
 
     .project-tag {
       display: inline-block;
-      background: #e5e9df;
-      color: var(--dark);
-      padding: 5px 12px;
-      border-radius: 20px;
+      color: var(--dark-sage);
       font-size: 11px;
-      margin-bottom: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .project-content h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .project-content p {
+      color: #62695E;
+      font-size: 14px;
+      margin-bottom: 12px;
     }
 
     .project-link {
       display: inline-block;
-      color: var(--sage);
-      font-size: 13px;
-      font-weight: bold;
-      margin-top: 15px;
+      margin-top: 10px;
+      color: var(--dark-sage);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
     }
 
-    .dashboard-image {
-      width: 100%;
-      border-radius: 10px;
-      margin: 15px 0;
+    .project-link:hover {
+      text-decoration: underline;
     }
-
-    .sulam-image {
-      width: 100%;
-      height: 260px;
-      object-fit: contain;
-      background: #f8f6ef;
-      border-radius: 10px;
-      margin: 15px 0;
-    }
-
-    .project-card ul {
-      padding-left: 20px;
-      margin-top: 8px;
-    }
-
-    /* ACHIEVEMENTS */
 
     .achievements {
-      background: var(--light);
+      background: var(--cream);
     }
 
     .achievement-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
     .achievement-card {
-      background: white;
-      padding: 25px;
+      background: var(--white);
+      padding: 28px;
       border-radius: 15px;
+      border-top: 4px solid var(--sage);
     }
 
     .achievement-card h3 {
-      color: var(--dark);
+      font-size: 21px;
       margin-bottom: 10px;
     }
 
-    /* CONTACT */
+    .achievement-card p {
+      font-size: 14px;
+      color: #62695E;
+      margin-bottom: 10px;
+    }
 
     .contact {
-      text-align: center;
-      background: var(--dark);
+      background: var(--dark-sage);
       color: white;
+      text-align: center;
     }
 
     .contact .section-title {
@@ -327,61 +323,52 @@
     }
 
     .contact .button {
-      background: var(--sage);
+      background: var(--cream);
+      color: var(--dark-sage);
     }
-
-    /* FOOTER */
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #28352c;
-      color: #dce2d8;
+      background: #43543F;
+      color: white;
       font-size: 12px;
     }
-
-    /* MOBILE */
 
     @media (max-width: 700px) {
       nav {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
       }
 
-      .nav-links {
-        justify-content: center;
+      nav ul {
+        gap: 13px;
         flex-wrap: wrap;
-        gap: 12px;
+        justify-content: center;
+      }
+
+      nav a {
         font-size: 11px;
       }
 
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 65px 8%;
+      section {
+        padding: 65px 7%;
       }
 
-      .hero p {
-        margin-left: auto;
-        margin-right: auto;
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 60px;
       }
 
       .hero-image {
-        width: 100%;
-        max-width: 260px;
+        width: 230px;
+        height: 280px;
       }
 
-      .hero-image img {
-        height: 320px;
-      }
-
-      section:not(.hero) {
-        padding: 65px 8%;
-      }
-
-      .project-grid,
-      .achievement-grid {
-        grid-template-columns: 1fr;
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .section-title {
@@ -394,11 +381,10 @@
 <body>
 
   <!-- NAVIGATION -->
-
   <nav>
     <div class="logo">Ainul.</div>
 
-    <ul class="nav-links">
+    <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -408,12 +394,10 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
-
+  <!-- HOME -->
   <section class="hero" id="home">
-
-    <div class="hero-content">
-      <span class="eyebrow">Welcome to my portfolio ✿</span>
+    <div class="hero-text">
+      <div class="eyebrow">Welcome to my portfolio</div>
 
       <h1>Hello, I'm<br>Ainul.</h1>
 
@@ -431,272 +415,245 @@
         src="https://raw.githubusercontent.com/enul-portfolio/enul-portfolio.github.io/main/lv_0_20260321221804.jpg"
         alt="Ainul's profile photo">
     </div>
-
   </section>
 
   <!-- ABOUT -->
-
   <section class="about" id="about">
-
     <div class="about-content">
-
-      <span class="eyebrow">Get to know me</span>
-
+      <div class="eyebrow">Get to know me</div>
       <h2 class="section-title">About Me</h2>
 
       <p>
-        I have an academic background in Accountancy and an interest
-        in financial reporting, auditing and data analytics.
-        I enjoy learning how financial information can support
-        business understanding and decision-making.
+        I am an Accountancy student at Universiti Teknologi MARA
+        (UiTM), with an academic background in accounting and
+        an interest in understanding how financial information
+        supports business decisions.
       </p>
 
       <p>
-        Through academic projects, professional training and
-        practical experience, I continue to develop my technical
-        skills, analytical thinking and professional communication.
+        Through academic projects and practical training,
+        I have gained exposure to audit procedures, financial
+        documentation, Excel and business analysis.
       </p>
+
+      <p>
+        I am continuously learning and developing my technical,
+        analytical and professional skills as I explore
+        opportunities in the accounting and finance field.
+      </p>
+
+      <h3>Skills & Interests</h3>
 
       <div class="skills">
         <span class="skill">Microsoft Excel</span>
         <span class="skill">Accounting</span>
         <span class="skill">Auditing</span>
-        <span class="skill">Data Analysis</span>
-        <span class="skill">Financial Reporting</span>
+        <span class="skill">Data Organisation</span>
+        <span class="skill">Financial Analysis</span>
         <span class="skill">Teamwork</span>
+        <span class="skill">Communication</span>
       </div>
-
     </div>
-
   </section>
 
   <!-- EXPERIENCE -->
-
   <section class="experience" id="experience">
-
-    <span class="eyebrow">My professional journey</span>
-
+    <div class="eyebrow">My professional journey</div>
     <h2 class="section-title">Work Experience</h2>
 
-    <p class="section-subtitle">INTERNSHIP EXPERIENCE</p>
+    <p class="section-intro">
+      Practical exposure and experience gained during my
+      internship in the accounting and auditing environment.
+    </p>
 
     <div class="experience-card">
-
       <h3>Audit Intern</h3>
-
-      <p><strong>Ismawadee & Co.</strong></p>
-
-      <p class="date">9 March 2026 – 28 August 2026</p>
+      <p class="date">Ismawadee & Co. | 9 March 2026 – 28 August 2026</p>
 
       <ul>
-        <li>Assisted in audit procedures for cash and bank balances.</li>
-        <li>Assisted with property, plant and equipment audit work.</li>
-        <li>Performed payroll-related audit testing.</li>
-        <li>Assisted with vouching and supporting document reviews.</li>
-        <li>Prepared and organised audit working papers under supervision.</li>
-        <li>Assisted with confirmation letters and audit documentation.</li>
+        <li>Assisted the audit team in examining cash and bank balances.</li>
+        <li>Assisted with audit procedures relating to property, plant and equipment (PPE).</li>
+        <li>Performed payroll-related testing, including checking salary and statutory contribution records.</li>
+        <li>Assisted with vouching and reviewing supporting documents.</li>
+        <li>Prepared and organised audit working papers and documentation under supervision.</li>
+        <li>Assisted with confirmation letters and other audit-related tasks.</li>
       </ul>
-
     </div>
-
   </section>
 
   <!-- PROJECTS -->
-
   <section class="projects" id="projects">
-
-    <span class="eyebrow">What I've worked on</span>
-
+    <div class="eyebrow">Selected work</div>
     <h2 class="section-title">My Projects</h2>
 
-    <p class="section-subtitle">
-      A collection of academic and group projects
+    <p class="section-intro">
+      A collection of academic and group projects that
+      reflect my learning experiences and interests.
     </p>
 
     <div class="project-grid">
 
-      <!-- PROJECT 1: EXCEL DASHBOARD -->
-
+      <!-- EXCEL DASHBOARD -->
       <div class="project-card">
-
-        <span class="project-tag">Excel Dashboard</span>
-
-        <h3>Sales Performance & Customer Analysis</h3>
-
-        <p>
-          An academic group project using simulated data to explore
-          sales performance and customer information through
-          data organisation and dashboard presentation.
-        </p>
-
         <img
-          class="dashboard-image"
+          class="project-image"
           src="https://raw.githubusercontent.com/enul-portfolio/Sales-Performance-Customer-Analysis/main/sales.dashboard.png"
-          alt="Sales dashboard">
+          alt="Sales Performance and Customer Analysis Excel Dashboard">
 
-        <a class="project-link"
-           href="https://github.com/enul-portfolio/Sales-Performance-Customer-Analysis"
-           target="_blank">
-          View Project ↗
-        </a>
+        <div class="project-content">
+          <span class="project-tag">Excel | Data Analysis</span>
 
+          <h3>Sales Performance & Customer Analysis</h3>
+
+          <p>
+            An academic group project involving simulated
+            sales and customer data to explore business
+            performance through Excel.
+          </p>
+
+          <p>
+            <strong>My contribution:</strong> Assisted with
+            data entry, data cleaning and data organisation
+            as part of the group project.
+          </p>
+
+          <a
+            class="project-link"
+            href="https://github.com/enul-portfolio/Sales-Performance-Customer-Analysis"
+            target="_blank">
+            View Project ↗
+          </a>
+        </div>
       </div>
 
-      <!-- PROJECT 2: BLUSCENT -->
-
+      <!-- SULAM PROJECT -->
       <div class="project-card">
-
-        <span class="project-tag">Innovation Project</span>
-
-        <h3>BluScent Air Conditioner</h3>
-
-        <p>
-          A group innovation project featuring an air purification
-          concept, white noise through built-in Wi-Fi speakers
-          and smart connectivity.
-        </p>
-
-        <p class="project-link">
-          MIIEX Silver Award
-        </p>
-
-      </div>
-
-      <!-- PROJECT 3: SULAM -->
-
-      <div class="project-card">
-
-        <span class="project-tag">Community Project | SULAM</span>
-
         <img
-          class="sulam-image"
+          class="project-image"
           src="https://raw.githubusercontent.com/enul-portfolio/enul-portfolio.github.io/main/sulam%20cover%20report.png"
           alt="Kedai Ramah Business Advisory Report cover">
 
-        <h3>Kedai Ramah – Business Advisory Report</h3>
+        <div class="project-content">
+          <span class="project-tag">Community Project | SULAM</span>
 
-        <p>
-          A group-based business advisory project focused
-          on analysing the business operations of Kedai
-          Ramah, a local food and beverage business in
-          Denpasar, Bali, Indonesia.
-        </p>
+          <h3>Kedai Ramah – Business Advisory Report</h3>
 
-        <p>
-          <strong>Role:</strong> Sales & Marketing Department
-        </p>
+          <p>
+            A group-based business advisory project focused
+            on analysing the business operations of Kedai
+            Ramah, a food and beverage business in Denpasar,
+            Bali, Indonesia.
+          </p>
 
-        <p><strong>My Contributions:</strong></p>
+          <p>
+            <strong>My role:</strong> Sales & Marketing Department.
+          </p>
 
-        <ul>
-          <li>Analysed existing marketing activities.</li>
-          <li>Conducted SWOT analysis.</li>
-          <li>Identified marketing-related issues.</li>
-          <li>Proposed recommendations to improve promotions
-              and customer engagement.</li>
-        </ul>
+          <p>
+            <strong>My contributions:</strong> Analysed existing
+            marketing activities, conducted SWOT analysis,
+            identified marketing-related issues and proposed
+            recommendations to improve promotions and
+            customer engagement.
+          </p>
 
-        <a class="project-link"
-           href="https://github.com/enul-portfolio/enul-portfolio.github.io/blob/main/SULAM_Business_Advisory_Report.pdf"
-           target="_blank">
-          View Full Report ↗
-        </a>
-
+          <a
+            class="project-link"
+            href="https://github.com/enul-portfolio/enul-portfolio.github.io/blob/main/SULAM_Business_Advisory_Report.pdf"
+            target="_blank">
+            View Full Report ↗
+          </a>
+        </div>
       </div>
 
     </div>
-
   </section>
 
   <!-- ACHIEVEMENTS -->
-
   <section class="achievements" id="achievements">
-
-    <span class="eyebrow">Milestones & learning</span>
-
+    <div class="eyebrow">Recognition & learning</div>
     <h2 class="section-title">Achievements & Certificates</h2>
+
+    <p class="section-intro">
+      Recognition and learning experiences gained through
+      academic and professional development activities.
+    </p>
 
     <div class="achievement-grid">
 
       <div class="achievement-card">
-
-        <h3>🏆 MIIEX Silver Award</h3>
+        <h3>MIIEX – Silver Award</h3>
 
         <p>
-          Recognition received for the BluScent Air Conditioner
-          innovation project.
+          Received a Silver Award for participation in the
+          MIIEX innovation project.
         </p>
 
-        <a class="project-link"
-           href="https://github.com/enul-portfolio/enul-portfolio/blob/main/C_SILVER_485.pdf"
-           target="_blank">
+        <a
+          class="project-link"
+          href="https://github.com/enul-portfolio/enul-portfolio/blob/main/C_SILVER_485.pdf"
+          target="_blank">
           View Certificate ↗
         </a>
-
       </div>
 
       <div class="achievement-card">
-
-        <h3>MIIEX Participation Certificate</h3>
+        <h3>MIIEX – Certificate of Participation</h3>
 
         <p>
-          Certificate of participation in the MIIEX innovation event.
+          Certificate of participation in the MIIEX
+          innovation programme.
         </p>
 
-        <a class="project-link"
-           href="https://github.com/enul-portfolio/enul-portfolio/blob/main/C_485.pdf"
-           target="_blank">
+        <a
+          class="project-link"
+          href="https://github.com/enul-portfolio/enul-portfolio/blob/main/C_485.pdf"
+          target="_blank">
           View Certificate ↗
         </a>
-
       </div>
 
       <div class="achievement-card">
-
         <h3>Data Analytics Power Up Programme</h3>
 
         <p>
-          Faculty of Accountancy, UiTM, delivered by PwC's Academy.
-          December 2024 – January 2025.
+          A learning programme organised by the Faculty
+          of Accountancy, UiTM, delivered by PwC's Academy
+          from December 2024 to January 2025.
         </p>
 
-        <a class="project-link"
-           href="https://github.com/enul-portfolio/enul-portfolio/blob/main/Certificate_of_Completion.pdf"
-           target="_blank">
+        <a
+          class="project-link"
+          href="https://github.com/enul-portfolio/enul-portfolio/blob/main/Certificate_of_Completion.pdf"
+          target="_blank">
           View Certificate ↗
         </a>
-
       </div>
 
     </div>
-
   </section>
 
   <!-- CONTACT -->
-
   <section class="contact" id="contact">
-
-    <span class="eyebrow">Let's connect</span>
-
-    <h2 class="section-title">Get In Touch</h2>
+    <div class="eyebrow">Let's connect</div>
+    <h2 class="section-title">Get in Touch</h2>
 
     <p>
       Thank you for visiting my portfolio.
-      Feel free to connect with me!
+      Feel free to explore my work and connect with me.
     </p>
 
-    <a class="button"
-       href="https://github.com/enul-portfolio"
-       target="_blank">
+    <a
+      class="button"
+      href="https://github.com/enul-portfolio"
+      target="_blank">
       Visit My GitHub ↗
     </a>
-
   </section>
 
   <!-- FOOTER -->
-
   <footer>
-    <p>© 2026 Ainul. Designed with care ✿</p>
+    © 2026 Ainul Hadhirah. Designed with care.
   </footer>
 
 </body>
